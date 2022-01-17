@@ -1,8 +1,5 @@
 import axios, { AxiosResponse } from "axios";
 
-//OMDB API
-const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b";
-
 //TMDB API
 const API_KEY: string = 'api_key=4e999d34d86c060126d18c6c6a05aa5b'
 const BASE_URL: string = 'https://api.themoviedb.org/3'
