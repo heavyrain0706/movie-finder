@@ -1,0 +1,27 @@
+.movie {
+    flex: 0 1 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    border-radius: 20px;
+    margin: 0 0 25px 0;
+    transition: border 0.2s;
+        &:hover {
+            border: 1px solid #424242;
+            cursor: pointer;
+        }
+}
+
+.movieTitle, .movieImage {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.movieYear {
+    color: #424242;
+    font-weight: 700;
+}
