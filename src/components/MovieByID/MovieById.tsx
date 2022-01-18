@@ -28,7 +28,7 @@ const MovieById: FC = () => {
                 </button>
                 <div className={classes.movie}>
                     <div className={classes.movie__media}>
-                        <img style={{ borderRadius: 20 }} src={IMG_BASE_URL + movieById.poster_path} alt="poster" />
+                        <img className={classes.responsisveImg} style={{ borderRadius: 20 }} src={IMG_BASE_URL + movieById.poster_path} alt="poster" />
                     </div>
                     <div className={classes.movie__texbox}>
                         <div className={classes.movie__texbox_top}>
