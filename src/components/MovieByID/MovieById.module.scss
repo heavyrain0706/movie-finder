@@ -1,5 +1,6 @@
 .movie {
     display: flex;
+    padding: 10px 0;
 }
 
 .movie__media {
@@ -16,6 +17,7 @@
 
 .movie__texbox_top {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin: 0 0 10px 0;
@@ -25,12 +27,14 @@
     font-size: 26px;
     font-weight: 700;
     margin: 0;
+    align-self: flex-start;
 }
 
 .movie__date {
     font-size: 16px;
     font-weight: 700;
     color: #D30025;
+    align-self: flex-end;
 }
 
 .movie__overview {
@@ -44,4 +48,72 @@
 .movie__tagline {
     align-self: end;
     font-size: 16px;
+}
+
+.goBackBtn {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    color: #252525;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+        svg {
+            margin: 3px 5px 0 0;
+            path {
+                transition: fill 0.2s;
+            }
+        }
+        &:hover {
+            color: #D30025;
+            svg {
+                path {
+                    fill: #D30025;
+                }
+            } 
+        }
+}
+
+img {
+    max-width: 100%;
+    min-height: 100%;
+}
+
+@media (max-width: 900px){
+    .movie {
+        flex-direction: column;
+    }
+
+    .movie__media {
+        flex: 0 1 100%;
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+}
+
+@media (max-width: 600px){
+    .movie__title {
+        font-size: 18px;
+    }    
+    .movie__overview {
+        font-size: 16px;
+        margin: 0 0 15px 0;
+    }
+}
+
+@media (max-width: 480px){
+    .movie__media {
+        padding: 0 5px;
+    }
+    .movie__texbox {
+        padding: 0 5px;
+    }
+    .movie__title {
+        margin: 0 0 10px 0;
+    }
+    .movie__date {
+        font-size: 14px;
+    }
 }

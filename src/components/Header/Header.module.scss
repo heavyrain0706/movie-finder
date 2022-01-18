@@ -4,3 +4,10 @@
     color: #fff;
     letter-spacing: 10px;
 }
+
+@media (max-width: 600px){
+    .header__title {
+        font-size: 20px;
+    }
+
+}

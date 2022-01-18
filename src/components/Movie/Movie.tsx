@@ -23,7 +23,7 @@ const Movie: FC<MovieProps> = ({title, poster, date, id}) => {
                     src={IMG_BASE_URL + poster}
             />
             <p className={classes.movieYear}>{date}</p>
-            <button onClick={() => navigation(`/movies/${id}/${title}`)}>Подробней</button>
+            <button className={classes.detailsBtn} onClick={() => navigation(`/movies/${id}/${title}`)}>Подробней</button>
         </div>
     ) 
 } 

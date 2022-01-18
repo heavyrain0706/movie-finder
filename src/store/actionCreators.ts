@@ -22,7 +22,7 @@ export const MoviesActionCreators = {
             dispatch(MoviesActionCreators.fetchingError(result))
         }
     },
-    fetchMovieById: (id: string | undefined) => async (dispatch: AppDispatch) => {
+    fetchMovieById: (id: string) => async (dispatch: AppDispatch) => {
         try{
             dispatch(MoviesActionCreators.setFethcing(true))
             const response = await FetchService.getMovieById(id)
