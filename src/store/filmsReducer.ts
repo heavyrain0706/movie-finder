@@ -1,5 +1,5 @@
-import { IMovieByID } from './../types/IMovieByID';
-import { MoviesState, MoviesAction, MoviesActionTypes } from './../types/movies';
+import { IMovieByID } from './models/IMovieByID';
+import { MoviesState, MoviesAction, MoviesActionTypes } from './types/movies';
 
 
 

@@ -21,15 +21,21 @@ const Movies: FC = () => {
             <section className="movies">
                 <div className="container">
                     <div className={classes.moviesBody}>
+                        
                         {
-                            movies?.map(movie =>
-                                <Movie key={movie.id}
-                                    id={movie.id}
-                                    title={movie.title}
-                                    date={movie.release_date}
-                                    poster={movie.poster_path} />
-                            )
+                            movies.length > 0 ?  
+                                movies.map(movie =>
+                                    <Movie key={movie.id}
+                                        id={movie.id}
+                                        title={movie.title}
+                                        date={movie.release_date}
+                                        poster={movie.poster_path} />
+                                )
+                            :
+                            <span>По вашему запросу ничего не найдено</span>
                         }
+
+                        
                     </div>
                 </div>
             </section>

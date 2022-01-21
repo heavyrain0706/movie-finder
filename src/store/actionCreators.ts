@@ -1,8 +1,8 @@
 import { AppDispatch } from '.';
 import FetchService from '../API/FetchService';
-import { IMovieByID } from '../types/IMovieByID';
-import { SetFetchingAction, SetFetchingSuccessAction, SetFetchingErrorAction, SetMovieByIdAction  } from '../types/movies';
-import { MoviesActionTypes } from '../types/movies';
+import { IMovieByID } from './models/IMovieByID';
+import { SetFetchingAction, SetFetchingSuccessAction, SetFetchingErrorAction, SetMovieByIdAction  } from './types/movies';
+import { MoviesActionTypes } from './types/movies';
 
 
 export const MoviesActionCreators = {
@@ -19,7 +19,7 @@ export const MoviesActionCreators = {
             dispatch(MoviesActionCreators.fetchingError(null))
         } catch (e) {
             let result = (e as Error).message;
-            dispatch(MoviesActionCreators.fetchingError(result))
+            dispatch(MoviesActionCreators.fetchingError('Ошибка на стороне сервера ' + result))
         }
     },
     fetchMovieById: (id: string) => async (dispatch: AppDispatch) => {
@@ -30,7 +30,7 @@ export const MoviesActionCreators = {
             dispatch(MoviesActionCreators.fetchingError(null))
         } catch (e) {
             let result = (e as Error).message;
-            dispatch(MoviesActionCreators.fetchingError(result))
+            dispatch(MoviesActionCreators.fetchingError('Ошибка на стороне сервера ' + result))
         }
     }
 }

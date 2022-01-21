@@ -1,4 +1,4 @@
-import { IMovieByID } from "./IMovieByID";
+import { IMovieByID } from "../models/IMovieByID";
 
 
 export interface MoviesState {
